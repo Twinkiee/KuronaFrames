@@ -949,7 +949,9 @@ function KuronaFrames:OnFrame()
 			end
 				if self.tSettings.bShowCastBar then
 					self:PrepCastBars(unitPlayer,1,unitPlayer:GetInterruptArmorValue(),unitPlayer:GetInterruptArmorMax())
-					if frame == 1 then self:SpecialCastBarUpdate()	end
+					-- if frame == 1 then
+					self:SpecialCastBarUpdate()
+					--end
 					self:UpdateCastBar(unitPlayer,1)
 				end
 		elseif unitPlayer:GetMaxHealth() == unitPlayer:GetHealth() and not self.bCombatState then
@@ -965,7 +967,9 @@ function KuronaFrames:OnFrame()
 			end
 			if self.tSettings.bShowCastBar then
 				self:PrepCastBars(unitPlayer,1,unitPlayer:GetInterruptArmorValue(),unitPlayer:GetInterruptArmorMax())
-				if frame == 1 then self:SpecialCastBarUpdate()	end
+				-- if frame == 1 then
+				self:SpecialCastBarUpdate()
+				-- end
 				self:UpdateCastBar(unitPlayer,1)
 			end
 		end
