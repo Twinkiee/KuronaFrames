@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sprites>
+    <Sprite Name="FlashFrame" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_Unitframes_224_384.tex" x0="0" x1="5" x2="32" x3="33" x4="59" x5="64" y0="0" y1="5" y2="31" y3="32" y4="59" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="xkcdGoldenYellow" EndColor="white"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_Unitframes_224_384.tex" x0="0" x1="5" x2="32" x3="32" x4="59" x5="64" y0="0" y1="5" y2="32" y3="32" y4="59" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="xkcdGoldenYellow"/>
+    </Sprite>
+    <Sprite Name="Frame" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_Unitframes_224_384.tex" x0="0" x1="5" x2="33" x3="33" x4="59" x5="64" y0="0" y1="5" y2="31" y3="31" y4="59" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Frame2" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="8" x2="8" x3="8" x4="56" x5="64" y0="0" y1="8" y2="8" y3="8" y4="56" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Bar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="8" x2="33" x3="33" x4="56" x5="64" y0="0" y1="8" y2="33" y3="33" y4="56" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="PoliceFlashBar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.400" StartColor="blue" EndColor="red"/>
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" HotspotX="0" HotspotY="0" Duration="0.400" StartColor="red" EndColor="blue"/>
+    </Sprite>
+    <Sprite Name="Yellow" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdFadedYellow" EndColor="xkcdFadedYellow"/>
+    </Sprite>
+    <Sprite Name="FlatCastBar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\Flat-rounded-64.tga" x0="0" x1="8" x2="33" x3="33" x4="57" x5="64" y0="0" y1="6" y2="33" y3="33" y4="58" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="IA" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_280_52.tex" x0="0" x1="0" x2="0" x3="0" x4="36" x5="36" y0="0" y1="0" y2="0" y3="0" y4="36" y5="36" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="IABroken" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_315_52.tex" x0="0" x1="0" x2="0" x3="0" x4="36" x5="36" y0="0" y1="0" y2="36" y3="36" y4="36" y5="36" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="IARing1" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_385_52.tex" x0="1" x1="1" x2="1" x3="1" x4="35" x5="35" y0="2" y1="2" y2="2" y3="2" y4="35" y5="35" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="red" EndColor="black"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_385_52.tex" x0="1" x1="1" x2="1" x3="1" x4="35" x5="35" y0="2" y1="2" y2="2" y3="2" y4="35" y5="35" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="black" EndColor="red"/>
+    </Sprite>
+    <Sprite Name="IARin2" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_385_52.tex" x0="1" x1="1" x2="1" x3="1" x4="35" x5="35" y0="0" y1="0" y2="0" y3="2" y4="35" y5="35" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdLightGold" EndColor="xkcdDarkGold"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_385_52.tex" x0="1" x1="1" x2="1" x3="1" x4="35" x5="35" y0="0" y1="0" y2="0" y3="2" y4="35" y5="35" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdDarkGold" EndColor="xkcdLightGold"/>
+    </Sprite>
+    <Sprite Name="IARing3" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_ActionBar_TEMP_350_52.tex" x0="0" x1="0" x2="36" x3="36" x4="36" x5="36" y0="0" y1="0" y2="0" y3="0" y4="36" y5="36" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="FillingBar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="gray"/>
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="gray" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="FlashFrame2" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.700" StartColor="ffff4a4a" EndColor="white"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.700" StartColor="white" EndColor="ffff4a4a"/>
+    </Sprite>
+    <Sprite Name="Circle" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_QuestJewels_0_384.tex" x0="3" x1="3" x2="3" x3="3" x4="61" x5="61" y0="3" y1="3" y2="3" y3="3" y4="61" y5="61" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="CircleFill" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteCircle.tex" x0="0" x1="0" x2="0" x3="0" x4="256" x5="256" y0="0" y1="0" y2="0" y3="0" y4="256" y5="256" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="darkgray" EndColor="darkgray"/>
+    </Sprite>
+    <Sprite Name="CircleFlash" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_QuestJewels_0_384.tex" x0="3" x1="3" x2="3" x3="3" x4="60" x5="60" y0="3" y1="3" y2="3" y3="3" y4="61" y5="61" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="white" EndColor="xkcdGoldenYellow"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_QuestJewels_0_384.tex" x0="3" x1="3" x2="3" x3="3" x4="60" x5="60" y0="3" y1="3" y2="3" y3="3" y4="61" y5="61" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="xkcdGoldenYellow" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="CircleFull" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteCircle.tex" x0="0" x1="0" x2="0" x3="0" x4="256" x5="256" y0="0" y1="0" y2="0" y3="0" y4="256" y5="256" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="white" EndColor="gray"/>
+        <Frame Texture="UI\Assets\Textures\UI_WhiteCircle.tex" x0="0" x1="0" x2="0" x3="0" x4="256" x5="256" y0="0" y1="0" y2="0" y3="0" y4="256" y5="256" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="gray" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="CircleFul" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteCircle.tex" x0="0" x1="0" x2="0" x3="0" x4="256" x5="256" y0="0" y1="0" y2="0" y3="0" y4="256" y5="256" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="darkgray" EndColor="darkgray"/>
+    </Sprite>
+    <Sprite Name="Flamey" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Basekit_1090_600.tex" x0="57" x1="57" x2="224" x3="224" x4="224" x5="232" y0="4" y1="12" y2="18" y3="25" y4="31" y5="37" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="red" EndColor="xkcdAmber"/>
+    </Sprite>
+    <Sprite Name="FlashFrame3" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="white" EndColor="xkcdBanana"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="xkcdBanana" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="NewSprite1" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_HoldTheLine_98_407.tex" x0="0" x1="0" x2="0" x3="0" x4="0" x5="0" y0="0" y1="0" y2="0" y3="0" y4="0" y5="0" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Stalker" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_CM_Stalker_1.tex" x0="68" x1="68" x2="68" x3="68" x4="612" x5="612" y0="360" y1="360" y2="360" y3="360" y4="488" y5="488" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.666" StartColor="white" EndColor="cyan"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Stalker_1.tex" x0="68" x1="68" x2="68" x3="68" x4="612" x5="612" y0="360" y1="360" y2="360" y3="360" y4="488" y5="488" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.666" StartColor="cyan" EndColor="xkcdCornflower"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Stalker_1.tex" x0="68" x1="68" x2="68" x3="68" x4="612" x5="612" y0="360" y1="360" y2="360" y3="360" y4="488" y5="488" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.666" StartColor="xkcdCornflower" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="WarriorFlashFrame" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="red" EndColor="xkcdAmber"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="xkcdAmber" EndColor="white"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_ActionBarButton_Active.tex" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="white" EndColor="red"/>
+    </Sprite>
+    <Sprite Name="SlingBG" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="46" x1="46" x2="46" x3="46" x4="518" x5="518" y0="512" y1="512" y2="512" y3="512" y4="786" y5="786" Stretchy="1" HotspotX="49" HotspotY="35" Duration="1.000" StartColor="white" EndColor="xkcdAmber"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="46" x1="46" x2="46" x3="46" x4="518" x5="518" y0="512" y1="512" y2="512" y3="512" y4="786" y5="786" Stretchy="1" HotspotX="49" HotspotY="35" Duration="1.000" StartColor="xkcdAmber" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="SlingSigil" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="527" x1="527" x2="527" x3="527" x4="775" x5="775" y0="504" y1="504" y2="504" y3="504" y4="707" y5="707" Stretchy="1" HotspotX="49" HotspotY="35" Duration="1.000" StartColor="xkcdBloodOrange" EndColor="white"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="527" x1="527" x2="527" x3="527" x4="775" x5="775" y0="504" y1="504" y2="504" y3="504" y4="707" y5="707" Stretchy="1" HotspotX="49" HotspotY="35" Duration="1.000" StartColor="white" EndColor="xkcdElectricPurple"/>
+    </Sprite>
+    <Sprite Name="EngiInnate" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="46" x1="46" x2="46" x3="46" x4="518" x5="518" y0="512" y1="512" y2="512" y3="512" y4="786" y5="786" Stretchy="1" HotspotX="49" HotspotY="35" Duration="0.750" StartColor="yellow" EndColor="xkcdOrange"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Spellslinger.tex" x0="46" x1="46" x2="46" x3="46" x4="518" x5="518" y0="512" y1="512" y2="512" y3="512" y4="786" y5="786" Stretchy="1" HotspotX="49" HotspotY="35" Duration="0.750" StartColor="xkcdOrange" EndColor="yellow"/>
+    </Sprite>
+    <Sprite Name="MedicInnate" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_CM_Medic.tex" x0="29" x1="29" x2="29" x3="29" x4="668" x5="668" y0="389" y1="389" y2="389" y3="389" y4="623" y5="623" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="white" EndColor="xkcdCoolGreen"/>
+        <Frame Texture="UI\Assets\Textures\UI_CM_Medic.tex" x0="29" x1="29" x2="29" x3="29" x4="668" x5="668" y0="389" y1="389" y2="389" y3="389" y4="623" y5="623" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.500" StartColor="xkcdCoolGreen" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="DamagedBar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="white" EndColor="white"/>
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdBabyPink" EndColor="xkcdBloodRed"/>
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdBlood" EndColor="xkcdBloodRed"/>
+    </Sprite>
+    <Sprite Name="TierLight" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Crafting_1_808_848.tex" x0="15" x1="15" x2="15" x3="15" x4="59" x5="59" y0="0" y1="0" y2="0" y3="0" y4="41" y5="41" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="TierLightFull" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Crafting_1_808_848.tex" x0="15" x1="15" x2="15" x3="15" x4="59" x5="59" y0="0" y1="0" y2="0" y3="0" y4="41" y5="41" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="green" EndColor="white"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Crafting_1_808_848.tex" x0="15" x1="15" x2="15" x3="15" x4="59" x5="59" y0="0" y1="0" y2="0" y3="0" y4="41" y5="41" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.250" StartColor="white" EndColor="green"/>
+    </Sprite>
+    <Sprite Name="FlashBar2" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="white" EndColor="darkgray"/>
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="darkgray" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="FlatBarFlash" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\Flat-rounded-64.tga" x0="0" x1="8" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="white" EndColor="darkgray"/>
+        <Frame Texture="KuronaFrames\Sprites\Flat-rounded-64.tga" x0="0" x1="8" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="darkgray" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="DarkerBar" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\square-rounded-64.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="gray" EndColor="gray"/>
+    </Sprite>
+    <Sprite Name="SquareFrame" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="0" x2="0" x3="3" x4="61" x5="64" y0="0" y1="0" y2="0" y3="3" y4="61" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="NewSprite" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.png" x0="0" x1="0" x2="0" x3="0" x4="0" x5="0" y0="0" y1="0" y2="0" y3="0" y4="0" y5="0" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="SquareFlashBar2" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="white" EndColor="darkgray"/>
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.200" StartColor="darkgray" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="SquareFlashFrame2" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.700" StartColor="ffff4a4a" EndColor="xkcdFadedYellow"/>
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.700" StartColor="xkcdFadedYellow" EndColor="ffff4a4a"/>
+    </Sprite>
+    <Sprite Name="SquareWarriorFlashFrame" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="red" EndColor="xkcdAmber"/>
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="xkcdAmber" EndColor="white"/>
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="0" x1="9" x2="31" x3="31" x4="55" x5="64" y0="0" y1="9" y2="32" y3="32" y4="55" y5="64" HotspotX="0" HotspotY="0" Duration="0.300" StartColor="white" EndColor="red"/>
+    </Sprite>
+    <Sprite Name="SquarePoliceFlashBar" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.400" StartColor="blue" EndColor="red"/>
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" HotspotX="0" HotspotY="0" Duration="0.400" StartColor="red" EndColor="blue"/>
+    </Sprite>
+    <Sprite Name="PsiCharge" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_Abilities_Icon_Power.tex" x0="5" x1="5" x2="5" x3="5" x4="42" x5="42" y0="48" y1="48" y2="84" y3="84" y4="84" y5="84" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.625" StartColor="xkcdAcidGreen" EndColor="gray"/>
+        <Frame Texture="UI\Assets\Textures\UI_Abilities_Icon_Power.tex" x0="5" x1="5" x2="5" x3="5" x4="42" x5="42" y0="48" y1="48" y2="84" y3="84" y4="84" y5="84" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.625" StartColor="gray" EndColor="xkcdAcidGreen"/>
+    </Sprite>
+    <Sprite Name="PsiChargeBacker" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_Abilities_Icon_Power.tex" x0="5" x1="5" x2="5" x3="5" x4="42" x5="42" y0="48" y1="48" y2="84" y3="84" y4="84" y5="84" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.625" StartColor="black" EndColor="black"/>
+    </Sprite>
+    <Sprite Name="FlatDamagedBar" Cycle="1">
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="white" EndColor="white"/>
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdBabyPink" EndColor="xkcdBloodRed"/>
+        <Frame Texture="UI\Assets\Textures\UI_WhiteBG.tex" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdBlood" EndColor="xkcdBloodRed"/>
+    </Sprite>
+    <Sprite Name="TexSquare" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\texSquare.tga" x0="0" x1="0" x2="0" x3="0" x4="0" x5="0" y0="0" y1="0" y2="0" y3="0" y4="0" y5="0" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="TextBar3" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\TextSquare2.tga" x0="0" x1="0" x2="0" x3="0" x4="100" x5="100" y0="0" y1="0" y2="0" y3="0" y4="100" y5="100" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="KF-SS1" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SlingerRunes.tga" x0="0" x1="0" x2="0" x3="0" x4="65" x5="65" y0="0" y1="0" y2="0" y3="0" y4="63" y5="63" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="KF-SS2" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SlingerRunes.tga" x0="65" x1="65" x2="65" x3="65" x4="130" x5="130" y0="0" y1="0" y2="0" y3="0" y4="63" y5="63" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="KF-SS3" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SlingerRunes.tga" x0="0" x1="0" x2="0" x3="0" x4="65" x5="65" y0="66" y1="66" y2="66" y3="66" y4="129" y5="129" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="KF-SS4" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SlingerRunes.tga" x0="65" x1="65" x2="65" x3="65" x4="130" x5="130" y0="66" y1="66" y2="66" y3="66" y4="129" y5="129" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="TextBar4" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\TextSquare3.tga" x0="0" x1="0" x2="200" x3="200" x4="200" x5="200" y0="0" y1="0" y2="0" y3="0" y4="100" y5="100" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="white" EndColor="white"/>
+    </Sprite>
+    <Sprite Name="Static" Cycle="1">
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Static_0_0.tex" x0="0" x1="0" x2="0" x3="0" x4="144" x5="144" y0="0" y1="0" y2="0" y3="0" y4="113" y5="113" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="white" EndColor="xkcdPinky"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Static_0_0.tex" x0="217" x1="217" x2="217" x3="217" x4="361" x5="361" y0="18" y1="18" y2="18" y3="18" y4="131" y5="131" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdPinky" EndColor="xkcdPinky"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Static_0_0.tex" x0="24" x1="24" x2="24" x3="24" x4="168" x5="168" y0="137" y1="137" y2="137" y3="137" y4="250" y5="250" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdPinky" EndColor="xkcdPinky"/>
+        <Frame Texture="UI\Assets\TexPieces\UI_CRB_Static_0_0.tex" x0="183" x1="183" x2="183" x3="183" x4="327" x5="327" y0="137" y1="137" y2="137" y3="137" y4="250" y5="250" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdPinky" EndColor="xkcdPinkyRed"/>
+    </Sprite>
+    <Sprite Name="FlatDamagedBar1" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\transsquare.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="white" EndColor="white"/>
+        <Frame Texture="KuronaFrames\Sprites\transsquare.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="0.100" StartColor="xkcdBabyPink" EndColor="xkcdBloodRed"/>
+        <Frame Texture="KuronaFrames\Sprites\transsquare.tga" x0="0" x1="7" x2="33" x3="33" x4="57" x5="64" y0="0" y1="7" y2="33" y3="33" y4="57" y5="64" Stretchy="1" HotspotX="0" HotspotY="0" Duration="1.000" StartColor="xkcdBlood" EndColor="xkcdBloodRed"/>
+    </Sprite>
+    <Composite Name="IABrokenAnim" Cycle="1">
+        <Layer Name="IABroken"/>
+        <Layer Name="IARing1"/>
+    </Composite>
+    <Composite Name="ShinyIA" Cycle="1">
+        <Layer Name="IA"/>
+        <Layer Name="IARin2"/>
+    </Composite>
+    <Composite Name="AniDamaged" Cycle="1">
+        <Layer Name="Static"/>
+        <Layer Name="FlatDamagedBar1"/>
+    </Composite>
+    <Sprite Name="KFDebuffBorder" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="2" x1="3" x2="3" x3="3" x4="61" x5="62" y0="2" y1="3" y2="3" y3="3" y4="61" y5="62" HotspotX="0" HotspotY="0" Duration="2.000" StartColor="red" EndColor="xkcdBarbiePink"/>
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="2" x1="3" x2="3" x3="3" x4="61" x5="62" y0="2" y1="3" y2="3" y3="3" y4="61" y5="62" HotspotX="0" HotspotY="0" Duration="2.000" StartColor="xkcdBarbiePink" EndColor="red"/>
+    </Sprite>
+    <Sprite Name="KFBuffBorder" Cycle="1">
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="2" x1="3" x2="3" x3="3" x4="61" x5="62" y0="2" y1="3" y2="3" y3="3" y4="61" y5="62" Stretchy="1" HotspotX="0" HotspotY="0" Duration="2.000" StartColor="cyan" EndColor="xkcdAlgaeGreen"/>
+        <Frame Texture="KuronaFrames\Sprites\SquareFrameB.tga" x0="2" x1="3" x2="3" x3="3" x4="61" x5="62" y0="2" y1="3" y2="3" y3="3" y4="61" y5="62" Stretchy="1" HotspotX="0" HotspotY="0" Duration="2.000" StartColor="xkcdAlgaeGreen" EndColor="cyan"/>
+    </Sprite>
+</Sprites>

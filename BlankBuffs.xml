@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Forms>
+    <Form Name="Buffs" Class="BuffContainerWindow" LAnchorPoint="0" LAnchorOffset="20" TAnchorPoint="0" TAnchorOffset="-33" RAnchorPoint="0" RAnchorOffset="400" BAnchorPoint="0" BAnchorOffset="-3" Picture="0" Border="0" NoClip="1" BGColor="white" TextColor="white" Sprite="WhiteFill" HideInEditor="0" IgnoreMouse="1" TooltipColor="" AutoAddBuffs="1" BeneficialBuffs="0" IgnoreTooltipDelay="1" TooltipType="OnCursor" AlignBuffsRight="1" ShowBuffTypeBorder="1" BuffOverlaySprite="KFBuffBorder" HarmfulBuffs="0" BuffDispellable="0" BuffNonDispellable="0" BuffNonDispelRightClickOk="0" Overlapped="0" Tooltip="" DebuffDispellable="0" PulseWhenExpiring="0" DebuffOverlaySprite="KFDebuffBorder">
+        <Event Name="GenerateTooltip" Function="OnGenerateBuffTooltip"/>
+    </Form>
+</Forms>

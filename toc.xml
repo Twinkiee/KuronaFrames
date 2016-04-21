@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addon Author="Kurona Silversky" APIVersion="12" Name="KuronaFrames" Description="A UnitFrames Built from scratch for performance." Version="291">
+    <Script Name="KuronaFrames.lua"/>
+    <Script Name="Options.lua"/>
+    <Script Name="lib/GeminiColor/GeminiColor.lua"/>
+    <Script Name="lib/LibJSON/LibJSON-2.5.lua"/>
+    <Form Name="KuronaFrames.xml"/>
+    <Script Name="CastBar.lua"/>
+    <Form Name="BlankBuffs.xml"/>
+    <Script Name="KuronaSprint.lua"/>
+    <ReplaceAddon Name="CastBar"/>
+    <ReplaceAddon Name="PotatoFrames"/>
+    <ReplaceAddon Name="TargetFrame"/>
+</Addon>
