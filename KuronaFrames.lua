@@ -1159,10 +1159,10 @@ function KuronaFrames:UpdateFrame(unit, frame)
   end
 
   --- UI Names	 ---
-  wndHealth = self.FrameAlias[frame]["HealthProgressBar"]
-  wndShieldBar = self.FrameAlias[frame]["ShieldProgressBar"]
-  wndAbsorbBar = self.FrameAlias[frame]["AbsorbProgressBar"]
-  wndCCArmor = self.FrameAlias[frame]["CCArmor"]
+  local wndHealth = self.FrameAlias[frame]["HealthProgressBar"]
+  local wndShieldBar = self.FrameAlias[frame]["ShieldProgressBar"]
+  local wndAbsorbBar = self.FrameAlias[frame]["AbsorbProgressBar"]
+  local wndCCArmor = self.FrameAlias[frame]["CCArmor"]
 
 
   local HPpercent = (nHealth / nHealthMax) * 100
@@ -1462,6 +1462,7 @@ end
 
 function KuronaFrames:StrForNum(num, numMax, bigFrame, numsonly)
   if num == nil then return 0 end
+  local strNum
   if not self.tSettings.bUsePercentages or numsonly then
     if num > 1000 then
       strNum = self:HelperFormatBigNumber(num)
@@ -2205,7 +2206,7 @@ function KuronaFrames:DefaultTable()
 
 
   if self.player ~= nil then
-    eClassId = self.player:GetClassId()
+    local eClassId = self.player:GetClassId()
     if eClassId == GameLib.CodeEnumClass.Spellslinger then
       defaultsettings.cResourcesB = 245
     elseif eClassId == GameLib.CodeEnumClass.Stalker then
@@ -2488,7 +2489,7 @@ function KuronaFrames:FillFrame(unit, frame)
       end
       if eRank < 6 then
         local strRank = String_GetWeaselString(Apollo.GetString("TargetFrame_CreatureRank"), ktRankDescriptions[eRank][2])
-        strTooltipRank = self:HelperBuildTooltip(strRank, ktRankDescriptions[eRank][1])
+        local strTooltipRank = self:HelperBuildTooltip(strRank, ktRankDescriptions[eRank][1])
         self.Frames[frame]:FindChild("MobRank"):SetTooltip(strTooltipRank)
       end
       self.Frames[frame]:FindChild("ClassIcon"):SetSprite(strPlayerIconSprite)
@@ -2508,7 +2509,7 @@ function KuronaFrames:GetFPercentage(nArg1, nArg2)
     return strError
   end
   if nArg2 == 0 then
-    sResult = " "
+    local sResult = " "
     return sResult
   end
 
@@ -2870,7 +2871,7 @@ function KuronaFrames:OnNextFrame()
 
     if target and target:IsValid() then
       --			Print(target:GetCCStateTimeRemaining(Unit.CodeEnumCCState.Disarm))
-      fvulnerabletime = target:GetCCStateTimeRemaining(Unit.CodeEnumCCState.Vulnerability) or 0
+      local fvulnerabletime = target:GetCCStateTimeRemaining(Unit.CodeEnumCCState.Vulnerability) or 0
       if fvulnerabletime > 0 then
         self:UpdateVunerableTimes(fvulnerabletime, 2)
       end
