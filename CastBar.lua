@@ -269,7 +269,6 @@ function KuronaFrames:PrepCastBars(unit, frame, nCCArmorValue, nCCArmorMax)
   end
 
   self.FrameAlias[frame]["RecordedMaxCC"] = nCCArmorMax
-	
 end
 
 
@@ -314,71 +313,71 @@ function KuronaFrames:UpdateCastBar(unitCaster, frame)
   local fTimeRemaining = (nDuration - nElapsed) / 1000
 
   if frame == 1 then -- special casting
-    if self.bSpecialCasting and self.bSpecialCastName == self.CurCastName then
-      nElapsed = GameLib.GetSpellThresholdTimePrcntDone(self.tCurrentOpSpell.id)
-      nDuration = 1
+  if self.bSpecialCasting and self.bSpecialCastName == self.CurCastName then
+    nElapsed = GameLib.GetSpellThresholdTimePrcntDone(self.tCurrentOpSpell.id)
+    nDuration = 1
+    fTimeRemaining = 0
+    if self.MultiTapCast then
+      nElapsed = (1 - nElapsed)
+    end
+    if not self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
+      self.FrameAlias[frame]["ChargeFrame"]:Show(true)
+    end
+    self.FrameAlias[frame]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
+    self.FrameAlias[frame]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
+
+    -- If we are not casting but we still have a special cast counting down....
+  elseif self.bSpecialCasting and self.CurCastName == "" then
+    nElapsed = GameLib.GetSpellThresholdTimePrcntDone(self.tCurrentOpSpell.id)
+    nDuration = 1
+    fTimeRemaining = 0
+
+    if not self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
+      self.FrameAlias[frame]["ChargeFrame"]:Show(true)
+    end
+    self.FrameAlias[frame]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
+    self.FrameAlias[frame]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
+
+
+    if self.MultiTapCast then
+      nElapsed = (1 - nElapsed)
+    end
+    if self.FrameAlias[frame]["RecordedSpellTime"] ~= "" then
+      self.FrameAlias[frame]["SpellTime"]:SetText("")
+      self.FrameAlias[frame]["RecordedSpellTime"] = ""
+    end
+    -- Regular casting
+  else
+    if self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
+      self.FrameAlias[frame]["ChargeFrame"]:Show(false)
+    end
+    if fTimeRemaining <= 0 then
       fTimeRemaining = 0
-      if self.MultiTapCast then
-        nElapsed = (1 - nElapsed)
+      if self.FrameAlias[frame]["RecordedSpellTime"] ~= "0.0s" then
+        self.FrameAlias[frame]["SpellTime"]:SetText("0.0s")
+        self.FrameAlias[frame]["RecordedSpellTime"] = "0.0s"
       end
-      if not self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
-        self.FrameAlias[frame]["ChargeFrame"]:Show(true)
+      if self.tSettings.bShowSpellTimeIcon then
+        self.FrameAlias[frame]["SpellIcon"]:SetText("0.0s")
+      else
+        self.FrameAlias[frame]["SpellIcon"]:SetText("")
       end
-      self.FrameAlias[frame]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
-      self.FrameAlias[frame]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
-
-      -- If we are not casting but we still have a special cast counting down....
-    elseif self.bSpecialCasting and self.CurCastName == "" then
-      nElapsed = GameLib.GetSpellThresholdTimePrcntDone(self.tCurrentOpSpell.id)
-      nDuration = 1
-      fTimeRemaining = 0
-
-      if not self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
-        self.FrameAlias[frame]["ChargeFrame"]:Show(true)
+    elseif fTimeRemaining > 0 then
+      local strCastTime = string.format("%.1fs", fTimeRemaining)
+      if self.FrameAlias[frame]["RecordedSpellTime"] ~= strCastTime then
+        self.FrameAlias[frame]["SpellTime"]:SetText("-" .. strCastTime)
+        self.FrameAlias[frame]["RecordedSpellTime"] = strCastTime
       end
-      self.FrameAlias[frame]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
-      self.FrameAlias[frame]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
-
-
-      if self.MultiTapCast then
-        nElapsed = (1 - nElapsed)
-      end
-      if self.FrameAlias[frame]["RecordedSpellTime"] ~= "" then
-        self.FrameAlias[frame]["SpellTime"]:SetText("")
-        self.FrameAlias[frame]["RecordedSpellTime"] = ""
-      end
-      -- Regular casting
-    else
-      if self.FrameAlias[frame]["ChargeFrame"]:IsVisible() then
-        self.FrameAlias[frame]["ChargeFrame"]:Show(false)
-      end
-      if fTimeRemaining <= 0 then
-        fTimeRemaining = 0
-        if self.FrameAlias[frame]["RecordedSpellTime"] ~= "0.0s" then
-          self.FrameAlias[frame]["SpellTime"]:SetText("0.0s")
-          self.FrameAlias[frame]["RecordedSpellTime"] = "0.0s"
-        end
-        if self.tSettings.bShowSpellTimeIcon then
-          self.FrameAlias[frame]["SpellIcon"]:SetText("0.0s")
-        else
+      if self.tSettings.bShowSpellTimeIcon then
+        self.FrameAlias[frame]["SpellIcon"]:SetText("-" .. strCastTime)
+      else
+        if self.FrameAlias[frame]["RecordedSpellTime"] ~= "" then
           self.FrameAlias[frame]["SpellIcon"]:SetText("")
-        end
-      elseif fTimeRemaining > 0 then
-        local strCastTime = string.format("%.1fs", fTimeRemaining)
-        if self.FrameAlias[frame]["RecordedSpellTime"] ~= strCastTime then
-          self.FrameAlias[frame]["SpellTime"]:SetText("-" .. strCastTime)
-          self.FrameAlias[frame]["RecordedSpellTime"] = strCastTime
-        end
-        if self.tSettings.bShowSpellTimeIcon then
-          self.FrameAlias[frame]["SpellIcon"]:SetText("-" .. strCastTime)
-        else
-          if self.FrameAlias[frame]["RecordedSpellTime"] ~= "" then
-            self.FrameAlias[frame]["SpellIcon"]:SetText("")
-            self.FrameAlias[frame]["RecordedSpellTime"] = ""
-          end
+          self.FrameAlias[frame]["RecordedSpellTime"] = ""
         end
       end
     end
+  end
   elseif frame ~= 1 then
     if fTimeRemaining <= 0 then
       fTimeRemaining = 0
@@ -422,7 +421,6 @@ function KuronaFrames:UpdateCastBar(unitCaster, frame)
       end
       return
     end
-
   end
 
   if not self.FrameAlias[frame]["CastFrame"]:IsShown() then
@@ -458,46 +456,46 @@ end
 
 
 function KuronaFrames:OnStartSpellThreshold(idSpell, nMaxThresholds, eCastMethod, nNewThreshold) -- also fires on tier change
-  -- Print("OnStartSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; eCastMethod: " .. eCastMethod)
+-- Print("OnStartSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; eCastMethod: " .. eCastMethod)
 
-  if self.tCurrentOpSpell ~= nil and idSpell == self.tCurrentOpSpell.id then
-    return
-  end -- we're getting an update event, ignore this one
+if self.tCurrentOpSpell ~= nil and idSpell == self.tCurrentOpSpell.id then
+  return
+end -- we're getting an update event, ignore this one
 
-  self.tCurrentOpSpell = {}
-  local splObject = GameLib.GetSpell(idSpell)
+self.tCurrentOpSpell = {}
+local splObject = GameLib.GetSpell(idSpell)
 
-  self.tCurrentOpSpell.id = idSpell
-  self.tCurrentOpSpell.nCurrentTier = nNewThreshold or 1
-  self.tCurrentOpSpell.nMaxTier = nMaxThresholds
-  self.tCurrentOpSpell.eCastMethod = eCastMethod
-  self.tCurrentOpSpell.strName = splObject:GetName()
-  self.bSpecialCasting = true
-  self.bSpecialCastName = self.tCurrentOpSpell.strName
-  self.MultiTapCast = false
+self.tCurrentOpSpell.id = idSpell
+self.tCurrentOpSpell.nCurrentTier = nNewThreshold or 1
+self.tCurrentOpSpell.nMaxTier = nMaxThresholds
+self.tCurrentOpSpell.eCastMethod = eCastMethod
+self.tCurrentOpSpell.strName = splObject:GetName()
+self.bSpecialCasting = true
+self.bSpecialCastName = self.tCurrentOpSpell.strName
+self.MultiTapCast = false
 
-  self:OnUpdateSpellThreshold(idSpell, self.tCurrentOpSpell.nCurrentTier)
+self:OnUpdateSpellThreshold(idSpell, self.tCurrentOpSpell.nCurrentTier)
 end
 
 function KuronaFrames:OnUpdateSpellThreshold(idSpell, nNewThreshold) -- Updates when P/H/R changes tier or RT tap is performed
 
-  Print("OnUpdateSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; idSpell(): " .. tostring(idSpell) .. "; GameLib.GetSpell(idSpell):GetTier(): " .. tostring(GameLib.GetSpell(idSpell):GetTier()) ) --.. "; taps: " .. tostring(_taps[idSpell][GameLib.GetSpell(idSpell):GetTier()]))
-  if self.tCurrentOpSpell == nil and GameLib.GetSpell(idSpell) ~= nil and (_taps[idSpell]) then
-    self:OnStartSpellThreshold(idSpell, _taps[idSpell], GameLib.GetSpell(idSpell):GetCastMethod(), nNewThreshold)
-  end
+Print("OnUpdateSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; idSpell(): " .. tostring(idSpell) .. "; GameLib.GetSpell(idSpell):GetTier(): " .. tostring(GameLib.GetSpell(idSpell):GetTier())) --.. "; taps: " .. tostring(_taps[idSpell][GameLib.GetSpell(idSpell):GetTier()]))
+if self.tCurrentOpSpell == nil and GameLib.GetSpell(idSpell) ~= nil and (_taps[idSpell]) then
+  self:OnStartSpellThreshold(idSpell, _taps[idSpell], GameLib.GetSpell(idSpell):GetCastMethod(), nNewThreshold)
+end
 
-  if self.tCurrentOpSpell == nil or idSpell ~= self.tCurrentOpSpell.id then
-    return
-  end
+if self.tCurrentOpSpell == nil or idSpell ~= self.tCurrentOpSpell.id then
+  return
+end
 
-  self.tCurrentOpSpell.nCurrentTier = nNewThreshold
-  --self.FrameAlias[1]["SpellIcon"]:SetText(self.tCurrentOpSpell.nCurrentTier.. "/"..self.tCurrentOpSpell.nMaxTier)
-  self.FrameAlias[1]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
-  self.FrameAlias[1]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
-  self.bSpecialCastName = self.tCurrentOpSpell.strName
+self.tCurrentOpSpell.nCurrentTier = nNewThreshold
+--self.FrameAlias[1]["SpellIcon"]:SetText(self.tCurrentOpSpell.nCurrentTier.. "/"..self.tCurrentOpSpell.nMaxTier)
+self.FrameAlias[1]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
+self.FrameAlias[1]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
+self.bSpecialCastName = self.tCurrentOpSpell.strName
 
-  --	self.FrameAlias[frame]["CastBar"]:SetFillSprite(self:GetCastBarType("normal",frame))
-  self.FrameAlias[1]["CastBar"]:SetFullSprite(self:GetCastBarType("flash"))
+--	self.FrameAlias[frame]["CastBar"]:SetFillSprite(self:GetCastBarType("normal",frame))
+self.FrameAlias[1]["CastBar"]:SetFullSprite(self:GetCastBarType("flash"))
 end
 
 function KuronaFrames:OnClearSpellThreshold(idSpell)
@@ -735,7 +733,6 @@ function KuronaFrames:DoProximityCastbars()
           end
 
           self.ProximityCast.Windows[self.ProximityCasting]:Show(true, true)
-
         end
 
         if self.tSettings.bShowSpellIcon then
