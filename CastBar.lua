@@ -455,47 +455,49 @@ function KuronaFrames:UpdateAuxCastBar(nDuration, nElapsed)
 end
 
 
-function KuronaFrames:OnStartSpellThreshold(idSpell, nMaxThresholds, eCastMethod, nNewThreshold) -- also fires on tier change
--- Print("OnStartSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; eCastMethod: " .. eCastMethod)
+-- also fires on tier change
+function KuronaFrames:OnStartSpellThreshold(idSpell, nMaxThresholds, eCastMethod, nNewThreshold)
+  -- Print("OnStartSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; eCastMethod: " .. eCastMethod)
 
-if self.tCurrentOpSpell ~= nil and idSpell == self.tCurrentOpSpell.id then
-  return
-end -- we're getting an update event, ignore this one
+  if self.tCurrentOpSpell ~= nil and idSpell == self.tCurrentOpSpell.id then
+    return
+  end -- we're getting an update event, ignore this one
 
-self.tCurrentOpSpell = {}
-local splObject = GameLib.GetSpell(idSpell)
+  self.tCurrentOpSpell = {}
+  local splObject = GameLib.GetSpell(idSpell)
 
-self.tCurrentOpSpell.id = idSpell
-self.tCurrentOpSpell.nCurrentTier = nNewThreshold or 1
-self.tCurrentOpSpell.nMaxTier = nMaxThresholds
-self.tCurrentOpSpell.eCastMethod = eCastMethod
-self.tCurrentOpSpell.strName = splObject:GetName()
-self.bSpecialCasting = true
-self.bSpecialCastName = self.tCurrentOpSpell.strName
-self.MultiTapCast = false
+  self.tCurrentOpSpell.id = idSpell
+  self.tCurrentOpSpell.nCurrentTier = nNewThreshold or 1
+  self.tCurrentOpSpell.nMaxTier = nMaxThresholds
+  self.tCurrentOpSpell.eCastMethod = eCastMethod
+  self.tCurrentOpSpell.strName = splObject:GetName()
+  self.bSpecialCasting = true
+  self.bSpecialCastName = self.tCurrentOpSpell.strName
+  self.MultiTapCast = false
 
-self:OnUpdateSpellThreshold(idSpell, self.tCurrentOpSpell.nCurrentTier)
+  self:OnUpdateSpellThreshold(idSpell, self.tCurrentOpSpell.nCurrentTier)
 end
 
-function KuronaFrames:OnUpdateSpellThreshold(idSpell, nNewThreshold) -- Updates when P/H/R changes tier or RT tap is performed
+-- Updates when P/H/R changes tier or RT tap is performed
+function KuronaFrames:OnUpdateSpellThreshold(idSpell, nNewThreshold)
 
-Print("OnUpdateSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; idSpell(): " .. tostring(idSpell) .. "; GameLib.GetSpell(idSpell):GetTier(): " .. tostring(GameLib.GetSpell(idSpell):GetTier())) --.. "; taps: " .. tostring(_taps[idSpell][GameLib.GetSpell(idSpell):GetTier()]))
-if self.tCurrentOpSpell == nil and GameLib.GetSpell(idSpell) ~= nil and (_taps[idSpell]) then
-  self:OnStartSpellThreshold(idSpell, _taps[idSpell], GameLib.GetSpell(idSpell):GetCastMethod(), nNewThreshold)
-end
+  -- Print("OnUpdateSpellThreshold; spell: " .. GameLib.GetSpell(idSpell):GetName() .. "; idSpell(): " .. tostring(idSpell) .. "; GameLib.GetSpell(idSpell):GetTier(): " .. tostring(GameLib.GetSpell(idSpell):GetTier())) --.. "; taps: " .. tostring(_taps[idSpell][GameLib.GetSpell(idSpell):GetTier()]))
+  if self.tCurrentOpSpell == nil and GameLib.GetSpell(idSpell) ~= nil and (_taps[idSpell]) then
+    self:OnStartSpellThreshold(idSpell, _taps[idSpell], GameLib.GetSpell(idSpell):GetCastMethod(), nNewThreshold)
+  end
 
-if self.tCurrentOpSpell == nil or idSpell ~= self.tCurrentOpSpell.id then
-  return
-end
+  if self.tCurrentOpSpell == nil or idSpell ~= self.tCurrentOpSpell.id then
+    return
+  end
 
-self.tCurrentOpSpell.nCurrentTier = nNewThreshold
---self.FrameAlias[1]["SpellIcon"]:SetText(self.tCurrentOpSpell.nCurrentTier.. "/"..self.tCurrentOpSpell.nMaxTier)
-self.FrameAlias[1]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
-self.FrameAlias[1]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
-self.bSpecialCastName = self.tCurrentOpSpell.strName
+  self.tCurrentOpSpell.nCurrentTier = nNewThreshold
+  --self.FrameAlias[1]["SpellIcon"]:SetText(self.tCurrentOpSpell.nCurrentTier.. "/"..self.tCurrentOpSpell.nMaxTier)
+  self.FrameAlias[1]["ChargeBar"]:SetMax(self.tCurrentOpSpell.nMaxTier)
+  self.FrameAlias[1]["ChargeBar"]:SetProgress(self.tCurrentOpSpell.nCurrentTier)
+  self.bSpecialCastName = self.tCurrentOpSpell.strName
 
---	self.FrameAlias[frame]["CastBar"]:SetFillSprite(self:GetCastBarType("normal",frame))
-self.FrameAlias[1]["CastBar"]:SetFullSprite(self:GetCastBarType("flash"))
+  --	self.FrameAlias[frame]["CastBar"]:SetFillSprite(self:GetCastBarType("normal",frame))
+  self.FrameAlias[1]["CastBar"]:SetFullSprite(self:GetCastBarType("flash"))
 end
 
 function KuronaFrames:OnClearSpellThreshold(idSpell)
